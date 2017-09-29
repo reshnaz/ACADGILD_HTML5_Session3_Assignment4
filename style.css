@@ -1,0 +1,28 @@
+body{
+	/*background-image: url(http://www.tslearning.it/wp-content/uploads/2014/03/Fotolia_26713479_Subscription_Monthly_XXL.jpg);*/
+	background-image: url(http://unisourceinsurance.com/wp-content/uploads/2015/09/Fotolia_88471055_Subscription_Monthly_M.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: cover;
+	background-color: #E9E4E7;
+	font-family: 'Aldrich', sans-serif;
+}
+
+.StudentForm{
+	margin: 20px;
+	z-index: 2;
+	font-size: 12px;
+}
+
+input{
+	margin: 5px 10px 5px 0px;
+}
+
+span{
+	color: grey;
+	font-size: 10px;
+}
+
+.bttnsubmit{
+	opacity: 0.85;
+}

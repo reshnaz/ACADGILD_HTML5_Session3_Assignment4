@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+	<script type="text/javascript" language="javascript">
+    function checkform()
+    {
+        var f = document.forms["StudentForm"].elements;
+        var cansubmit = true;
+
+        for (var i = 0; i < f.length; i++) {
+            if (f[i].value.length == 0) cansubmit = false;
+        }
+
+        document.getElementById('bttnsubmit').disabled = !cansubmit;
+    }
+	</script> 
+	<title>CSS Assignment-4</title>
+</head>
+
+<body>
+	<!--Student Registration Form-->
+	<h1 style="margin-left: 20px">Student Registration Form</h1>
+	<h3 style="margin-left: 20px">Fill out the form carefully for registration</h3>
+	<form class="StudentForm" name="StudentForm">
+	<div>
+		Student Name<br>
+		<div class="inputs">
+			<!-- Use maxlength attribute to limit the # of characters input to name fields -->
+			<input type="text" name="fname" placeholder="First Name" maxlength="20" onKeyup="checkform()">
+			<input type="text" name="mname" placeholder="Middle Name" maxlength="20" onKeyup="checkform()">
+			<input type="text" name="lname" placeholder="Last Name" maxlength="20" onKeyup="checkform()"></div>
+	</div>
+	<br>
+	<div>
+		<table>
+			<tr><td>Birth Date</td><td>Gender</td></tr>
+				<tr>
+					<!-- Use min and max attributes for date range -->
+				<td><input type="Date" name="dob" onKeyup="checkform()" max="2000-12-31" min="1900-01-01"></td>
+				<td>
+				<select name="gender" onKeyup="checkform()">
+					<option value="default"></option>
+				  	<option value="male">Male</option>
+				  	<option value="female">Female</option>
+				</select>
+			</td> 
+				</tr>				
+		</table>				
+	</div>
+	<br>
+	<div>
+		Address<br>
+		<table>
+			<tr>
+				<td>
+					<input type="text" name="addL1" onKeyup="checkform()"><br>
+					<span>Address Line1</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="addL2" onKeyup="checkform()"><br>
+					<span>Address Line2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="city" onKeyup="checkform()"><br>
+					<span>City</span>
+				</td>
+				<td>
+					<input type="text" name="state" onKeyup="checkform()"><br>
+					<span>State/Province</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="zip" onKeyup="checkform()"><br>
+					<span>Postal/Zip Code</span>
+				</td>
+				<td>
+					<input type="text" name="country" onKeyup="checkform()"><br>
+					<span>Country</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div>
+		Student E-mail<br>
+		<input type="email" name="e-mail" onKeyup="checkform()">
+	</div>
+	<br>
+	<div>
+		Mobile Number<br>
+		<input type="text" name="mobile" onKeyup="checkform()">
+	</div>
+	<br>
+	<div>
+		<table>
+			<tr>
+				<td>
+					Work Number<br>
+					<input type="text" name="work" onKeyup="checkform()">
+				</td>
+				<td>
+					Company<br>
+					<!-- Use maxlength attribute to limit characters in company field -->
+					<input type="text" name="company" maxlength="50" onKeyup="checkform()">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div>
+		Additional Comments<br>
+		<!-- Use maxlength attribute to limit characters in comments field -->
+		<textarea name="comment" placeholder="Max 100 characters" maxlength="100" onKeyup="checkform()"></textarea>
+	</div>
+
+	<div>
+		<br><input id="bttnsubmit" type="submit" disabled="disabled" value="Submit" />
+	</div>
+	</form>
+
+</body>
+</html>
